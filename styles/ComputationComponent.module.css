@@ -1,0 +1,11 @@
+.computationImage, .computationVideo {
+    max-width: 100%;
+    margin-top: 1rem;
+  }
+  
+  .computationDefault {
+    font-size: 1rem;
+    color: red;
+    margin-top: 1rem;
+  }
+  
