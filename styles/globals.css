@@ -26,7 +26,7 @@ a {
   scroll-snap-align: start;
 }
 
-.verse, .computation {
+.verse, .computation { /* i have two of these TODO -- delete one */
   width: 50%;  /* Each takes half of the width */
   box-sizing: border-box;
   display: flex;
