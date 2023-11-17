@@ -57,17 +57,17 @@ const YourPoemPage = () => {
         </div>
       </div>
 
-      <div className="poemContainer">
+      {/* <div className="poemContainer">
         <div className="verse">
           <PoemVerse stanza="Your second stanza here..." />
         </div>
         <div className="computation">
-          <ComputationComponent
-            type="video"
-            content="path_to_your_video_or_other_content"
+        <ComputationComponent
+            type="image"
+            content="path_to_your_image_or_other_content"
           />
         </div>
-      </div>
+      </div> */}
 
       {/* Add more stanzas and computations as needed */}
     </>

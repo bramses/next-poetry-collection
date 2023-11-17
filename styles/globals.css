@@ -17,51 +17,77 @@ a {
 
 /* my css */
 
-.poemContainer {
-  height: 100vh;  /* Full viewport height */
-  display: flex;  /* Set the container as flex */
-  flex-direction: row;  /* Items laid out horizontally */
-  justify-content: space-between;  /* Space out the stanza and computation */
-  align-items: center;  /* Vertically center the content */
-  scroll-snap-align: start;
-}
 
-.verse, .computation { /* i have two of these TODO -- delete one */
-  width: 50%;  /* Each takes half of the width */
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;  /* Horizontally center content */
-  align-items: center;  /* Vertically center content */
-  padding: 2rem;  /* Optional padding */
-}
-/* Ensure body scrolls smoothly (optional but enhances experience) */
-body {
-  scroll-snap-type: y proximity;  
-  overflow-y: scroll;
-  scroll-behavior: smooth;  /* Smooth scrolling */
-}
-
-.verse, .computation {
-  width: 48%; /* Take up slightly less than half the width to account for any padding/margins */
-  box-sizing: border-box; /* Ensures padding and border are included in the width */
-  vertical-align: top; /* Aligns the top of both the verse and computation */
-}
-
-.verse {
-  display: flex;
-  align-items: center; /* Vertically centers the content */
-  justify-content: center; /* Horizontally centers the content */
-  height: 50vh; /* You can adjust this value based on your needs */
-}
-
-.computation {
-  height: auto; /* Adjust based on your computation content */
-  overflow: auto; /* Allows scrolling if content exceeds container height */
-}
 
 /* Styles for mobile screens where the verse and computation stack */
 @media (max-width: 768px) { /* Adjust this breakpoint as needed */
   .verse, .computation {
     width: 100%; /* Full width on smaller screens */
+    box-sizing: border-box; /* Ensures padding and border are included in the width */
+    vertical-align: top; /* Aligns the top of both the verse and computation */
+    /* height: 50vh; You can adjust this value based on your needs */
+  }
+
+  .verse {
+    height: 43vh;  /* Full viewport height */
+  }
+  
+  .computation {
+    background-color: black;
+    height: 50vh;
+  }
+
+  /* for poem container computation should sit on top of verse -- both taking up full width and 50% of viewport each */
+  .poemContainer {
+    height: 100vh;  /* Full viewport height */
+    display: flex;  /* Set the container as flex */
+    flex-direction: column;  /* Items laid out horizontally */
+    justify-content: space-between;  /* Space out the stanza and computation */
+    align-items: center;  /* Vertically center the content */
+    scroll-snap-align: start;
+  }
+}
+
+@media (min-width: 768px) { /* Adjust this breakpoint as needed */
+  .poemContainer {
+    height: 100vh;  /* Full viewport height */
+    display: flex;  /* Set the container as flex */
+    flex-direction: row;  /* Items laid out horizontally */
+    justify-content: space-between;  /* Space out the stanza and computation */
+    align-items: center;  /* Vertically center the content */
+    scroll-snap-align: start;
+  }
+  
+  .verse, .computation { /* i have two of these TODO -- delete one */
+    width: 50%;  /* Each takes half of the width */
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;  /* Horizontally center content */
+    align-items: center;  /* Vertically center content */
+    padding: 2rem;  /* Optional padding */
+  }
+  /* Ensure body scrolls smoothly (optional but enhances experience) */
+  body {
+    scroll-snap-type: y proximity;  
+    overflow-y: scroll;
+    scroll-behavior: smooth;  /* Smooth scrolling */
+  }
+  
+  .verse, .computation {
+    width: 48%; /* Take up slightly less than half the width to account for any padding/margins */
+    box-sizing: border-box; /* Ensures padding and border are included in the width */
+    vertical-align: top; /* Aligns the top of both the verse and computation */
+  }
+  
+  .verse {
+    display: flex;
+    align-items: center; /* Vertically centers the content */
+    justify-content: center; /* Horizontally centers the content */
+    height: 50vh; /* You can adjust this value based on your needs */
+  }
+  
+  .computation {
+    height: auto; /* Adjust based on your computation content */
+    overflow: auto; /* Allows scrolling if content exceeds container height */
   }
 }

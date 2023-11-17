@@ -1,19 +1,36 @@
-.container {
-  /* styles for the poem verse container */
-}
-
-/* Media query for desktop */
-@media (min-width: 768px) {
-  .container {
-    /* different styles for desktop */
-  }
-}
-
 .poemVerse {
   font-size: 1.5rem;
   margin: 1rem 0;
   padding: 1rem;
-  border: 1px solid #e0e0e0;
+  /* border: 1px solid #e0e0e0;
   border-radius: 5px;
-  background-color: #f9f9f9;
+  background-color: #f9f9f9; */
+}
+
+.button-tab {
+  padding: 10px 15px;
+  border: none;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  background-color: #1E1E1E;
+  color: #CCC;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+.button-tab:hover {
+  background-color: #252526;
+}
+
+.button-tab-active {
+  padding: 10px 15px;
+  border: none;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  background-color:  gray;
+  color: #CCC;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s ease;
 }
